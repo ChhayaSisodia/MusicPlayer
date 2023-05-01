@@ -1,0 +1,159 @@
+/* Css Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cursor-pointer: pointer;
+}
+
+/* CSS for music container */
+#container {
+    background-color: black;
+    color: white;
+    width: 550px;
+    margin: auto;
+    text-align: center;
+    padding: 2rem 0;
+    border-radius: 5px;
+}
+
+/* music image */
+img {
+    width: 500px;
+    margin: auto;
+    display: block;
+    height: 313px;
+}
+
+/* track name */
+h1 {
+    padding: 2rem 0 0.5rem;
+}
+
+/* artist name */
+p {
+    padding-bottom: 0rem;
+}
+
+/* play, pause, previous and next icons */
+#icons-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3rem 10rem 0;
+    cursor: var(--cursor-pointer);
+}
+
+.icons {
+    font-size: 26px;
+}
+
+/* play and pause icon */
+#icon-mid {
+    font-size: 50px;
+}
+
+/* CSS for music progress bar */
+#progressBar {
+    width: 75%;
+    margin-top: 1.5rem;
+    cursor: var(--cursor-pointer);
+}
+
+/* CSS for current time */
+#currentTime {
+    padding: 0 0.3rem;
+}
+
+/* volume button */
+#volume-div {
+    padding-top: 1.4rem;
+}
+
+#volumeControl {
+    width: 50%;
+    cursor: var(--cursor-pointer);
+}
+
+/* volume icons */
+.volume-icons {
+    font-size: 20px;
+    padding: 0 0.3rem;
+    cursor: var(--cursor-pointer);
+}
+
+/* making it responsive - adding media queries */
+@media only screen and (max-width: 600px) {
+
+    /* For music container */
+    #container {
+        width: 550px;
+        padding: 1.5rem 0;
+    }
+
+    /* music image */
+    img {
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    /* For music container */
+    #container {
+        width: 450px;
+        padding: 1rem 0;
+    }
+
+    /* music image */
+    img {
+        width: 400px;
+        height: 250px;
+    }
+
+    #icons-div {
+        margin: 2rem 4rem 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    /* For music container */
+    #container {
+        width: 350px;
+        padding: 1rem 0;
+    }
+
+    /* music image */
+    img {
+        width: 300px;
+        height: 200px;
+    }
+
+    #icons-div {
+        margin: 2rem 4rem 0;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    /* For music container */
+    #container {
+        width: 250px;
+        padding: 1rem 0;
+    }
+
+    /* music image */
+    img {
+        width: 200px;
+        height: 150px;
+    }
+
+    #icons-div {
+        margin: 2rem 4rem 0;
+    }
+}

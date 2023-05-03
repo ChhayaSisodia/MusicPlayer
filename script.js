@@ -26,7 +26,10 @@ const musicList = [
     }
 ]
 
+// Taking index 0
 let i = 0;
+
+// Taking elements by their Ids
 let music = new Audio('music/1.mp3');
 let track = document.getElementById('track');
 let artist = document.getElementById('artist');
@@ -49,7 +52,7 @@ midIcon.addEventListener('click', (e) => {
     }
 })
 
-// Setting track and artist name, and music time
+// Setting track and artist name
 let setName = () => {
     track.innerText = musicList[0].trackName;
     artist.innerText = musicList[0].artistName;
@@ -60,6 +63,10 @@ setName();
 music.addEventListener('timeupdate', () => {
     progress = parseInt(music.currentTime / music.duration * 100);
     progressBar.value = progress;
+    if (music.currentTime == music.duration) {
+        midIcon.classList.remove('fa-circle-pause');
+        midIcon.classList.add('fa-circle-play');
+    }
 })
 
 progressBar.addEventListener('change', () => {

@@ -66,6 +66,7 @@ music.addEventListener('timeupdate', () => {
     if (music.currentTime == music.duration) {
         midIcon.classList.remove('fa-circle-pause');
         midIcon.classList.add('fa-circle-play');
+        music.play()
     }
 })
 
